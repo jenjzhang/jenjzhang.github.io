@@ -11,17 +11,19 @@ I am a first year PhD student in the [Department of Statistics](https://statisti
 
 Education
 -----
-1. University of California, Berkeley, Ph.D. in Statistics
-2025 -- present
-1. Massachusetts Institute of Technology, B.S. in Mathematics, B.S. in Artificial Intelligence and Decision Making
-2021 -- 2025
+- **University of California, Berkeley**  
+  Ph.D. in Statistics, *2025 – present*  
+
+- **Massachusetts Institute of Technology**  
+  B.S. in Mathematics, B.S. in Artificial Intelligence and Decision Making, *2021 – 2025*  
 
 
 Research
 ======
-I'm broadly interested in 
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+I am broadly interested in **causal inference**, **applied statistics**, and **statistical approaches to machine learning**, with a focus on understanding and improving how data-driven methods can guide decisions in real-world contexts. In particular, I am drawn to problems at the intersection of:  
+
+- **Statistical learning and machine learning** for modeling, prediction, and inference, including NLP and computer vision applications  
+- **Uncertainty quantification** in models of complex systems  
+- **Confidence procedures** designed for specific scientific and policy goals  
+- **Applications in the social & physical sciences** (e.g., public policy, health, climate, economics)  
