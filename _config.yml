@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Jennifer Zhang"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Jennifer Zhang"
 description              : &description "personal description"
 url                      : https://jenjzhang.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   name             : "Jennifer Zhang"
   pronouns         : # example: "she/her"  
   bio              : "Statistics PhD Student @ Berkeley"
-  location         : "Earth"
+  location         : # "Earth"
   employer         : # "Red Brick University"
   uri              : # URL
   email            : "jenniferzhang@berkeley.edu" 
@@ -80,8 +80,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
+  # books:
+  #   title: 'Books'
   manuscripts:
     title: 'Journal Articles'    
   conferences:
