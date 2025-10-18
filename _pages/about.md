@@ -21,12 +21,11 @@ Education
 Research
 -----
 
-I am broadly interested in **causal inference**, **applied statistics**, and **statistical approaches to machine learning**, with a focus on understanding and improving how data-driven methods can guide decisions in real-world contexts. In particular, I am drawn to problems at the intersection of:  
+I am broadly interested in **causal inference**, **applied statistics**, and **statistical approaches to machine learning**, with a focus on understanding and improving how data-driven methods can guide decisions in real-world contexts. In particular, I am drawn to problems involving:  
 
-- **Statistical learning and machine learning** for modeling, prediction, and inference, including NLP and computer vision applications  
-- **Uncertainty quantification** in models of complex systems  
-- **Confidence procedures** designed for specific scientific and policy goals  
-- **Applications in the social & physical sciences** (e.g., public policy, health, climate, economics)
+- **Causal inference for LLM Evaluation**
+- **Causal machine learning**
+- **Applications in the social sciences**
 
 
 Contact
