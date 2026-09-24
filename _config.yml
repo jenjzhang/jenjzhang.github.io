@@ -86,6 +86,8 @@ publication_category:
     title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  workshops:
+    title: 'Workshop Papers (Non-Archival)'
   posters:
     title: 'Posters (Non-Archival)'
 
