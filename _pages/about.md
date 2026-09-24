@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a first year PhD student in the [Department of Statistics](https://statistics.berkeley.edu/) at the University of California, Berkeley. Previously, I obtained my B.S. in Mathematics and B.S. in Artificial Intelligence and Decision Making at MIT.
+I am a second year PhD student in the [Department of Statistics](https://statistics.berkeley.edu/) at the University of California, Berkeley. Previously, I obtained my B.S. in Mathematics and B.S. in Artificial Intelligence and Decision Making at MIT.
 
 Education
 -----
@@ -21,11 +21,11 @@ Education
 Research
 -----
 
-I am broadly interested in **causal inference**, **applied statistics**, and **machine learning**, with a focus on how rigorous statistical methods can inform high-stakes decisions in policy, governance, and algorithmic accountability. In particular, I am drawn to problems involving:
+My research focuses on evaluating AI systems: using causal inference, applied statistics, and machine learning to measure what models actually do, especially when they inform high-stakes decisions. This work is motivated by a broader interest in AI safety and the responsible use of algorithms, since rigorous evaluation is how we learn whether a system is safe to rely on. In particular, I am drawn to problems involving:
 
-- **Causal inference for LLM evaluation**
-- **Causal machine learning**
-- **AI policy and public policy applications**
+- **AI evaluation and measurement validity**
+- **Causal inference and machine learning for evaluation**
+- **Algorithmic accountability and AI governance in high-stakes decisions** (e.g., child welfare, healthcare)
 
 
 Other
