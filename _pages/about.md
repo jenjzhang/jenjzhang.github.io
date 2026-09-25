@@ -13,6 +13,7 @@ affiliation:
 email_text: "jenniferzhang [at] berkeley [dot] edu"
 # Show a figure box beside each selected paper (placeholder until `thumbnail` is set)
 paper_figures: false
+off_the_clock_title: "Outside the PhD"
 off_the_clock:
   - running
   - literature &amp; philosophy

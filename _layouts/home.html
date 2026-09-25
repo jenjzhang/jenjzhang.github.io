@@ -27,7 +27,7 @@
 <div class="page">
 
   <main class="main">
-    <h2 class="section-head mono"><span class="jz" aria-hidden="true">JZ</span><span>About</span></h2>
+    <h2 class="section-head mono">About</h2>
     <div class="about">
       {{ content }}
     </div>
@@ -77,10 +77,6 @@
   </main>
 
   <aside class="side">
-    <nav class="section-head mono side-nav" aria-label="Site">
-      {%- if author.cv %}<a href="{{ author.cv | relative_url }}">CV</a>{% endif %}
-    </nav>
-
     <div class="profile">
       <h1 class="name">{{ author.name | split: " " | join: "<br>" }}</h1>
       <img class="portrait" src="{{ author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of {{ author.name }}">
@@ -105,7 +101,7 @@
 
     {%- if page.off_the_clock %}
     <section class="otc">
-      <h2>Off the clock</h2>
+      <h2>{{ page.off_the_clock_title }}</h2>
       <ul>
         {%- for item in page.off_the_clock %}
         <li>{{ item }}</li>
