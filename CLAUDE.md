@@ -24,8 +24,8 @@ docker compose up
 
 All user-facing content lives in a small set of places:
 
-- **`_pages/about.md`** — the homepage (permalink: `/`). This is the main bio/research description.
-- **`_publications/`** — one `.md` file per paper. Front matter fields: `title`, `collection: publications`, `category` (`manuscripts` or `conferences`), `date`, `venue`, `paperurl`, `citation`, `excerpt`.
+- **`_pages/about.md`** — the homepage (permalink: `/`), rendered by the custom `_layouts/home.html` + `assets/css/home.scss` (not the Academic Pages theme). The markdown body is the left-column About text; front matter holds the right-column `affiliation`, `email_text`, and `off_the_clock` list. Name, photo, and link icons come from `author` in `_config.yml` (set `author.cv` to show the CV link).
+- **`_publications/`** — one `.md` file per paper. Front matter fields: `title`, `collection: publications`, `category` (`manuscripts`, `conferences`, `workshops`, `posters`), `date`, `venue`, `paperurl`, `citation`, `excerpt`. Papers with `selected: true` appear under "Selected work" on the homepage, using `authors` (markdown; bold your name), `venue_short`, `summary`, `links` (list of `label`/`url`), and optional `thumbnail` (figure boxes only show when `paper_figures: true` in `_pages/about.md`; a `[figure]` placeholder fills any without a thumbnail).
 - **`_talks/`** — one `.md` file per talk (currently set to `output: false` in `_config.yml`, so no individual pages are generated).
 - **`_data/navigation.yml`** — controls which links appear in the header nav. Most are commented out; uncomment to enable.
 - **`_config.yml`** — site-wide settings: author info, social links, publication categories, Jekyll plugins.
@@ -35,8 +35,8 @@ The `_data/cv.json` and `_pages/cv.md`/`cv-json.md` exist in the template but ar
 ## Key customizations
 
 - **Favicon**: `_includes/head/custom.html` — custom JZ favicon added here.
-- **Email**: displayed in `_pages/about.md` as plain text (`AT`, `DOT`) to avoid scraping.
-- **Publications nav**: commented out in `_data/navigation.yml` — the publications collection still builds pages at `/publication/<slug>` but is not linked from the header.
+- **Email**: displayed on the homepage as plain text (`[at]`, `[dot]`, from `email_text` in `about.md`) to avoid scraping.
+- **Publications page**: `/publications/` and `/publication/<slug>` still build with the old theme but are not linked from the homepage.
 
 ## Publication front matter
 

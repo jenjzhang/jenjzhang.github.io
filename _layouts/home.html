@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.author.bio }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.author.bio }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ site.author.avatar | prepend: '/images/' | absolute_url }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon_JZ.svg' | relative_url }}">
+  <link rel="icon" href="{{ '/images/favicon_JZ.ico' | relative_url }}">
+  <link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+</head>
+<body>
+{%- assign author = site.author -%}
+<div class="page">
+
+  <main class="main">
+    <h2 class="section-head mono"><span class="jz" aria-hidden="true">JZ</span><span>About</span></h2>
+    <div class="about">
+      {{ content }}
+    </div>
+
+    {%- assign papers = site.publications | where: "selected", true | sort: "date" | reverse -%}
+    {%- if papers.size > 0 %}
+    <h2 class="section-head mono">Selected work</h2>
+    <ol class="papers">
+      {%- for paper in papers %}
+      {%- assign primary = paper.links | first %}
+      <li class="paper{% unless page.paper_figures %} paper--no-figure{% endunless %}">
+        {%- if page.paper_figures %}
+        <div class="paper__figure">
+          {%- if paper.thumbnail %}
+          <img src="{{ paper.thumbnail | relative_url }}" alt="{{ paper.thumbnail_alt | default: '' }}" loading="lazy">
+          {%- else %}
+          <span aria-hidden="true">[figure]</span>
+          {%- endif %}
+        </div>
+        {%- endif %}
+        <div class="paper__body">
+          <div class="paper__num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</div>
+          <h3 class="paper__title">
+            {%- if primary %}<a href="{{ primary.url | relative_url }}">{{ paper.title }}</a>
+            {%- else %}{{ paper.title }}{% endif %}
+          </h3>
+          {%- if paper.authors %}
+          <div class="paper__authors">{{ paper.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</div>
+          {%- endif %}
+          <div class="paper__venue">{{ paper.venue_short | default: paper.venue }}</div>
+          {%- if paper.summary %}
+          <p class="paper__summary">{{ paper.summary }}</p>
+          {%- endif %}
+          {%- if paper.links.size > 0 %}
+          <div class="paper__links">
+            {%- for link in paper.links %}
+            <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </div>
+        <div class="paper__year">{{ paper.year | default: paper.date | date: "%Y" }}</div>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </main>
+
+  <aside class="side">
+    <nav class="section-head mono side-nav" aria-label="Site">
+      {%- if author.cv %}<a href="{{ author.cv | relative_url }}">CV</a>{% endif %}
+    </nav>
+
+    <div class="profile">
+      <h1 class="name">{{ author.name | split: " " | join: "<br>" }}</h1>
+      <img class="portrait" src="{{ author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of {{ author.name }}">
+      <div class="affiliation mono">{{ page.affiliation | join: "<br>" }}</div>
+
+      <ul class="icons">
+        {%- if author.cv %}
+        <li><a href="{{ author.cv | relative_url }}" aria-label="CV" title="CV"><i class="ai ai-cv" aria-hidden="true"></i></a></li>
+        {%- endif %}
+        {%- if author.googlescholar %}
+        <li><a href="{{ author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+        {%- endif %}
+        {%- if author.github %}
+        <li><a href="https://github.com/{{ author.github }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        {%- endif %}
+        {%- if author.linkedin %}
+        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        {%- endif %}
+      </ul>
+      <div class="email">{{ page.email_text }}</div>
+    </div>
+
+    {%- if page.off_the_clock %}
+    <section class="otc">
+      <h2>Off the clock</h2>
+      <ul>
+        {%- for item in page.off_the_clock %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+  </aside>
+
+</div>
+</body>
+</html>

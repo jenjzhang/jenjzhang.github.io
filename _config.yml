@@ -30,6 +30,7 @@ author:
   employer         : # "Red Brick University"
   uri              : # URL
   email            : "jenniferzhang@berkeley.edu" 
+  cv               : "/files/cv.pdf" # shows the CV link on the homepage; remove to hide
 
   # Academic websites
   academia         : # URL
